@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  web:
+    build: ./DTT
+    command: gunicorn DTT.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - ./DTT:/code
+    expose:
+      - 8000
+
+  nginx:
+    build: ./nginx
+    ports:
+      - "8000:80"
+    depends_on:
+      - web
