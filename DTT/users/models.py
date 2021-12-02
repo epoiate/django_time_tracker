@@ -6,3 +6,7 @@ from django.contrib.auth.models import AbstractUser
 
 class CustomUser(AbstractUser):
     """Default User model"""
+
+
+class Preferences(models.Model):
+    pass
