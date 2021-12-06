@@ -4,3 +4,4 @@
 sonarlint-state.xml
 sonarlint.xml
 sonarIssues.xml
+sonarlint/*
