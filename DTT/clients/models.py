@@ -4,4 +4,5 @@ from django.db import models
 
 
 class Client(models.Model):
-    pass
+
+    name = models.CharField(verbose_name="Client's name", max_length=255, blank=True)
