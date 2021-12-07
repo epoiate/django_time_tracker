@@ -4,4 +4,9 @@ from django.db import models
 
 
 class WorkUnit(models.Model):
-    pass
+
+    activity = models.ForeignKey(to='activities.Activity', on_delete=models.CASCADE)
+    worker = models.ForeignKey(to='users.CustomUser', on_delete=models.CASCADE)
+    date = models.DateTimeField()
+    duration = models.DurationField()
+
